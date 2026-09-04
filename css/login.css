@@ -1,0 +1,205 @@
+/* Main Font */
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+/* root */
+:root {
+  --main-margin-bottom: 12px;
+  --main-font: "Roboto";
+  --main-color: #fbf5f5;
+  --second-color: #363636;
+  --padding: 5px;
+  --padding-panel: 14px;
+  --border-radius: 100px;
+  --padding-panel-right: 8px;
+}
+
+/* Reset Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  line-height: 1.8;
+}
+
+/* body style */
+body {
+  font-family: "Roboto";
+}
+
+/* Start Form Input */
+
+.login-form {
+  flex-direction:column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
+  background: center/cover no-repeat url("../imgs/login-img.jpg");
+}
+
+.form {
+  backdrop-filter: blur(5px);
+  width: 400px;
+  max-height: 250px;
+  padding: 13px;
+  border-radius: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: 3px 3px 20px #b52727;
+}
+
+/* Title Form */
+.text-login {
+  text-align: center;
+  color: var(--main-color);
+  margin-bottom: var(--main-margin-bottom);
+}
+
+/* Input Form */
+.username,
+.password,
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.input-username,
+.input-password,
+.input-fullname,
+.input-new-username,
+.input-email,
+.input-new-password {
+  font-family: var(--main-font);
+  margin-bottom: var(--main-margin-bottom);
+  background-color: transparent;
+  border: 1px solid var(--second-color);
+  border-radius: var(--border-radius);
+  width: 70%;
+  color: var(--main-color);
+  font-family: var(--main-font);
+  padding-left: 8px;
+}
+
+.input-username::placeholder,
+.input-password::placeholder,
+.input-fullname::placeholder,
+.input-new-username::placeholder,
+.input-email::placeholder,
+.input-new-password::placeholder {
+  color: var(--main-color);
+}
+
+/* Button */
+.form-btn {
+  border: 1px solid var(--second-color);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  width: 70%;
+  color: var(--main-color);
+  background-color: #ad71713f;
+  font-family: var(--main-font);
+  cursor: pointer;
+  margin-bottom: var(--main-margin-bottom);
+
+  transition: all 0.3s ease;
+}
+.form-btn:hover {
+  background-color: white;
+  color: black;
+    backdrop-filter: blur(20px);
+    
+  transform: translateY(-3px);
+
+}
+
+/* Message */
+.message {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  font-size: 14px;
+}
+
+@media screen and (max-width: 600px){
+  .form {
+    margin: var(--padding-panel);
+    width: 90%;
+  }
+}
+
+/* End Login Form */
+
+/* --- Switch link (Login <-> Signup) --- */
+.switch-form-text {
+  text-align: center;
+  color: var(--main-color);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.switch-link {
+  color: #ffd7d7;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.switch-link:hover {
+  color: #ffffff;
+}
+
+/* --- Signup form tweaks (reuses .login-form / .form) --- */
+.signup-form .form {
+  max-height: none;
+  padding-bottom: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .login-form {
+    padding: 10px;
+  }
+}
+
+
+
+/* Pixelpay */
+.logo{
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    top: 24px;
+  }
+}
+
+.logo img{
+  width: 70vw;           /* responsive width based on screen */
+  max-width: 200px;      /* don’t get too big */
+  min-width: 180px;      /* don’t get too small */
+  height: auto;
+}
+/* Pixelpay */
+
+/* Pixelpay heading */
+.logo1 {
+/* Logo Container */
+}
+
+.logo1 img{
+  align-items: center;
+  width: 70vw;           /* responsive width based on screen */
+  max-width: 200px;      /* don’t get too big */
+  min-width: 180px;      /* don’t get too small */
+  height: auto;
+}
+

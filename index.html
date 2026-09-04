@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="imgs/logos.png" />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+
+    <title>Pixel Pay | Simple Banking</title>
+  </head>
+  <body>
+    <!-- Start login-form -->
+    <div class="login-form">
+      <!-- Pixelpay -->
+      <div class="logo">
+        <img src="imgs/pixelpaylogin.png" alt="Pixel Pay">
+      </div>
+      <!-- Pixelpay -->
+      <form action="#" class="form" id="login-form-el">
+        <!-- Start title Form -->
+        <p class="text-login">Login to Pixel Pay</p>
+        <!-- End title Form -->
+
+        <!-- Start username Input -->
+        <div class="username">
+          <input
+            type="text"
+            placeholder="Enter your username"
+            class="input-username"
+            id="input-username"
+            autocomplete="off"
+          />
+        </div>
+        <!-- End username Input -->
+
+        <!-- Start password Input -->
+        <div class="password">
+          <input
+            type="password"
+            placeholder="Enter your password"
+            class="input-password"
+            id="input-password"
+          />
+        </div>
+        <!-- End password Input -->
+
+        <!-- Start btn -->
+        <div class="btn">
+          <button class="form-btn" type="submit">Go to your account</button>
+        </div>
+        <!-- End btn -->
+
+        <div class="message"></div>
+
+        <!-- Start switch-to-signup -->
+        <p class="switch-form-text">
+          New to Pixel Pay?
+          <a href="#" class="switch-link" id="show-signup">Create an account</a>
+        </p>
+        <!-- End switch-to-signup -->
+      </form>
+    </div>
+    <!-- end login-form -->
+
+    <!-- Start signup-form -->
+    <div class="login-form signup-form" style="display: none;">
+      <div class="logo">
+        <img src="imgs/pixelpaylogin.png" alt="Pixel Pay">
+      </div>
+      <form action="#" class="form" id="signup-form-el">
+        <p class="text-login">Create your account</p>
+
+        <div class="username">
+          <input
+            type="text"
+            placeholder="Full name"
+            class="input-fullname"
+            id="input-fullname"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="username">
+          <input
+            type="text"
+            placeholder="Choose a username"
+            class="input-new-username"
+            id="input-new-username"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="username">
+          <input
+            type="email"
+            placeholder="Email address"
+            class="input-email"
+            id="input-email"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="password">
+          <input
+            type="password"
+            placeholder="Create a password"
+            class="input-new-password"
+            id="input-new-password"
+          />
+        </div>
+
+        <div class="btn">
+          <button class="form-btn" type="submit">Create account</button>
+        </div>
+
+        <div class="message signup-message"></div>
+
+        <p class="switch-form-text">
+          Already have an account?
+          <a href="#" class="switch-link" id="show-login">Log in</a>
+        </p>
+      </form>
+    </div>
+    <!-- end signup-form -->
+
+    <!-- Start User Panel -->
+    <div class="user-panel">
+
+      <!-- Top navbar -->
+      <div class="topbar">
+        <div class="logo1">
+          <img src="imgs/pixelpay.png" alt="Pixel Pay">
+        </div>
+
+        <!-- Desktop controls -->
+        <div class="div-darkmode">
+          <img class="profile-acc" src="imgs/profile.png" alt="profile">
+          <button id="theme-toggle" class="btn-modeChange">
+            <span id="theme-icon">🌙</span>
+          </button>
+          <button class="btn-logout">Logout</button>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <!-- end topbar -->
+
+      <!-- Mobile slide-down menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-item" id="mobile-theme-toggle">
+          <span id="mobile-theme-icon">🌙</span> Toggle theme
+        </button>
+        <button class="mobile-menu-item btn-logout-mobile">
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </button>
+      </div>
+      <!-- end mobile menu -->
+
+      <!-- Start --- Top List --- User Information -->
+      <div class="info__user-panel">
+        <div class="user-info">
+          <div class="user-info__left">
+            <div class="fullName"></div>
+            <div style="color: #fbd9d9;" class="email"></div>
+          </div>
+        </div>
+        <div class="user-detail">
+          <div class="user-detail__left">
+            <span>Account No:</span>
+            <div style="font-weight: bolder;" class="id"></div>
+            <div style="color: #fbd9d9;" class="joinDate"></div>
+          </div>
+        </div>
+      </div>
+      <!-- End --- Top List --- User Information -->
+
+      <!-- Start --- Stat Cards: Balance / Income / Expenses -->
+      <div class="stats-row">
+        <div class="stat-card stat-balance">
+          <div class="stat-label"><i class="fa-solid fa-wallet"></i> Balance</div>
+          <div class="stat-value balance"></div>
+        </div>
+        <div class="stat-card stat-income">
+          <div class="stat-label"><i class="fa-solid fa-arrow-down"></i> Income</div>
+          <div class="stat-value income"></div>
+        </div>
+        <div class="stat-card stat-expenses">
+          <div class="stat-label"><i class="fa-solid fa-arrow-up"></i> Expenses</div>
+          <div class="stat-value expenses"></div>
+        </div>
+      </div>
+      <!-- End Stat Cards -->
+
+      <!-- Start --- Right List --- Quick Actions -->
+      <div class="change__user-panel">
+        <p class="quick">Quick Actions</p>
+        <div class="services-container">
+
+          <div class="service-card" id="action-send">
+            <i class="fa-solid fa-paper-plane action-icon"></i>
+            <h3>Send Money</h3>
+            <p>Transfer to another user</p>
+          </div>
+
+          <div class="service-card" id="action-add">
+            <i class="fa-solid fa-circle-plus action-icon"></i>
+            <h3>Add Money</h3>
+            <p>Top up your balance</p>
+          </div>
+
+          <div class="service-card" id="action-transactions">
+            <i class="fa-solid fa-receipt action-icon"></i>
+            <h3>Transactions</h3>
+            <p>View full history</p>
+          </div>
+
+        </div>
+        <!-- Quick action forms (shown inline when toggled) -->
+        <div class="action-form" id="send-form" style="display:none;">
+          <input type="text" class="input-send-to" placeholder="Recipient username" autocomplete="off" />
+          <input type="number" class="input-send-amount" placeholder="Amount" />
+          <button class="btn-transaction btn-send">Send</button>
+        </div>
+
+        <div class="action-form" id="add-form" style="display:none;">
+          <input type="number" class="input-deposit" placeholder="Amount to add" />
+          <button class="btn-transaction btn-deposit">Add Money</button>
+        </div>
+      </div>
+      <!-- End --- Right List --- Quick Actions -->
+
+      <!-- Start --- Left List --- User Transactions -->
+      <div class="badge__user-panel">
+        <div class="txn-header-row">
+          <p class="quick">Recent Transactions</p>
+        </div>
+        <div class="table-scroll">
+          <table class="badge-table">
+            <thead>
+              <tr class="tr">
+                <th class="table-head">Type</th>
+                <th class="table-head">Amount</th>
+                <th class="table-head">Date</th>
+                <th class="table-head">Description</th>
+                <th class="table-head">Status</th>
+              </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <!-- End --- Left List --- User Transactions -->
+    </div>
+    <!-- End User Panel -->
+
+    <!-- Full Transactions Modal -->
+    <div class="modal-overlay" id="transactions-modal">
+      <div class="modal-box">
+        <div class="modal-header">
+          <p class="quick">All Transactions</p>
+          <button class="modal-close" id="close-transactions-modal">&times;</button>
+        </div>
+        <div class="table-scroll modal-table-scroll">
+          <table class="badge-table">
+            <thead>
+              <tr class="tr">
+                <th class="table-head">Type</th>
+                <th class="table-head chevron-head">
+                  <i class="fa-solid fa-chevron-down"></i>
+                  Amount
+                </th>
+                <th class="table-head">Date</th>
+                <th class="table-head">Description</th>
+                <th class="table-head">Status</th>
+              </tr>
+            </thead>
+            <tbody class="tbody-full"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- End Full Transactions Modal -->
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
